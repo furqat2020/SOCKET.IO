@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Socket.IO</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <ul id="message-container"></ul>
+            </div>
+            <div class="col-sm-6">
+                <form class="form-group" id="send-container">
+                    <input autocomplete="off" class="form-control" type="text" id="message-input">
+                    <button class="btn btn-outline-success mt-2 btn-sm" type="submit" id="send-button">Send</button>
+                </form>              
+            </div>
+        </div>
+    </div>
+</body>
+</html>
