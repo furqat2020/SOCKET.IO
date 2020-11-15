@@ -11,5 +11,11 @@ io.on('connection', socket => {
     socket.on('send-chat-message', message => {
         socket.broadcast.emit('chat-message', {message: message, name: users[socket.id]})
     })
+    
+    socket.on('disconnect', () => {
+        socket.broadcast.emit('disconnected', users[socket.id])
+        delete users[socket.id]
+    })
+    
     console.log('Ishga tushdi...')
 })
