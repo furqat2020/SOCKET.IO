@@ -16,6 +16,10 @@ socket.on('user-connected', name => {
     appendMessage(`${name} ulandi. `)
 })
 
+socket.on('disconnected', name => {
+    appendMessage(`${name} chiqdi.`)
+})
+
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value
